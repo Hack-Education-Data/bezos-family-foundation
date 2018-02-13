@@ -1,0 +1,21 @@
+---
+layout: default
+title: The Bezos Family Foundation's Investors
+---
+
+<h2>The Bezos Family Foundation's Investors</h2>
+
+<!-- Organizations -->
+{% assign investors = site.data.investors %}
+{% assign investors = investors | sort:"Name" %}
+
+<!-- Document -->
+
+{% for investor in investors %}
+
+<ul>
+<li><strong>{{ investor.Name }}</strong> ({{ investor.Date }}, {{ investor.Notes }})</li>
+</ul>
+
+{% endfor %}
+
